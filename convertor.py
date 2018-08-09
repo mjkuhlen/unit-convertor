@@ -2,7 +2,7 @@ running = True
 while running == True:
 	decision1 = False
 	while decision1 == False:
-		print('\n\nWould you like to convert [K]ilometers, [M]iles or [Q]uit?')
+		print('Would you like to convert [K]ilometers, [M]iles or [Q]uit?')
 		unit_type = input().lower()
 		if unit_type[0] == 'k':
 			decision1 = True
