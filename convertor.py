@@ -2,19 +2,16 @@ running = True
 while running == True:
 	decision1 = False
 	while decision1 == False:
-		print('Would you like to convert [K]ilometers, [M]iles or [Q]uit?')
-		unit_type = input().lower()
+		unit_type = input('Would you like to convert [K]ilometers, [M]iles or [Q]uit? ').lower()
 		if unit_type[0] == 'k':
 			decision1 = True
-			print('Input the amount kilometers to convert')
-			kms = input()
+			kms = input('Input the amount kilometers to convert ')
 			miles = float(kms)/1.60934
 			miles = round(miles,2)
 			print(f'{kms} kilometers is equal to {miles} miles.')
 		elif unit_type[0] == 'm':
 			decision1 = True
-			print('Input the amount of miles to convert')
-			mi = input()
+			mi = input('Input the amount of miles to convert: ')
 			km = float(mi)*1.60934
 			km = round(km,2)
 			print(f'{mi} miles is equal to {km} kilometers.')
@@ -26,8 +23,7 @@ while running == True:
 			print('Please choose [K]ilometers, [M]iles or [Q]uit')
 	decision2 = False
 	while decision2 == False and unit_type[0] != 'q':
-		print('Would you like to convert another value, [Y]es or [N]o?')
-		answer = input().lower()
+		answer = input('Would you like to convert another value, [Y]es or [N]o? ').lower()
 		if answer[0] == 'n':
 			running = False
 			decision2 = True
