@@ -6,9 +6,13 @@ while running == True:
 		if unit_type[0] == 'k':
 			decision1 = True
 			kms = input('Input the amount kilometers to convert ')
-			miles = float(kms)/1.60934
-			miles = round(miles,2)
-			print(f'{kms} kilometers is equal to {miles} miles.')
+			# Added Logic to check for digit 
+			if kms.isdigit():
+				miles = float(kms)/1.60934
+				miles = round(miles,2)
+				print(f'{kms} kilometers is equal to {miles} miles.')
+			else:
+				print('Please enter a number.')
 		elif unit_type[0] == 'm':
 			decision1 = True
 			mi = input('Input the amount of miles to convert: ')
